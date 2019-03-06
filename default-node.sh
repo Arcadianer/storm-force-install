@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #Admin
 sudo su
 #Pre-Repo
