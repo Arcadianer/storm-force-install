@@ -18,5 +18,11 @@ apt-get -y install docker-ce docker-ce-cli containerd.io
 # Install Kube-Systems
 apt-get -y install kubelet kubeadm kubectl 
 apt-mark hold kubelet kubeadm kubectl 
-# Done
-echo "Done"
+# Done Install
+echo "Done Install"
+# Create Wireguard keys
+umask 377
+mkdir /vpn
+mkdir /vpn/wg0
+cd /vpn/wg0
+wg genkey | tee privatekey | wg pubkey > publickey
