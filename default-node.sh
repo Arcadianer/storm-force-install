@@ -1,9 +1,9 @@
 #!/bin/bash
-#Admin
+# Admin
 sudo su
-#Pre-Repo
+# Pre-Repo
 apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-#Add Repos
+# Add Repos
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -19,5 +19,5 @@ apt-get -y install docker-ce docker-ce-cli containerd.io
 # Install Kube-Systems
 apt-get -y install kubelet kubeadm kubectl
 apt-mark hold kubelet kubeadm kubectl
-#Done
+# Done
 echo "Done"
