@@ -26,5 +26,5 @@ mkdir /vpn
 mkdir /vpn/wg0
 cd /vpn/wg0
 wg genkey | tee privatekey | wg pubkey > publickey
-curl https://raw.githubusercontent.com/Arcadianer/storm-force-install/master/wg-sample.conf
-cp wg-sample.conf /etc/wg/wg0.conf
+wget https://raw.githubusercontent.com/Arcadianer/storm-force-install/master/wg-sample.conf
+
